@@ -1,13 +1,13 @@
-import React from 'react';
-import '../components/Homemain.css'
-import image from '../img/homemainimage.png'
+import React from "react";
+import "../components/Homemain.css";
+import image from "../img/homemainimage.png";
 function Homemain() {
   const handleLogin = () => {
-    window.location.href = 'https://example.com/login'; // Replace with actual login page URL
+    window.location.href = "https://example.com/login"; // Replace with actual login page URL
   };
 
   const handleSignup = () => {
-    window.location.href = 'https://example.com/signup'; // Replace with actual signup page URL
+    window.location.href = "https://example.com/signup"; // Replace with actual signup page URL
   };
 
   return (
@@ -30,12 +30,24 @@ function Homemain() {
             <h1 id="animated-heading" className="unique-animated-heading">
               Welcome to Secure Self: Your Digital Guardian
             </h1>
-            <p>Secure Self is a cutting-edge platform designed to revolutionize how you manage your personal documents.</p>
-            <p>Say goodbye to the hassle of physical documents and embrace the future of digital document management with Secure Self.</p>
-            <button className="unique-btn unique-explore-btn">Explore Now</button>
+            <p>
+              Secure Self is a cutting-edge platform designed to revolutionize
+              how you manage your personal documents.
+            </p>
+            <p>
+              Say goodbye to the hassle of physical documents and embrace the
+              future of digital document management with Secure Self.
+            </p>
+            <button className="unique-btn unique-explore-btn">
+              Explore Now
+            </button>
           </div>
           <div className="unique-right-image transform transition duration-300 hover:scale-110">
-            <img src={image} alt="Secure Self Platform" className="unique-platform-img" />
+            <img
+              src={image}
+              alt="Secure Self Platform"
+              className="unique-platform-img"
+            />
           </div>
         </section>
 
@@ -66,4 +78,4 @@ function Homemain() {
   );
 }
 
-export default Homemain;
+export default Homemain;

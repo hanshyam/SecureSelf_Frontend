@@ -89,16 +89,16 @@ const StoreContextProvider = (props) => {
   }, []);
 
   // Optional: Log userDetails whenever they change
-  
-    useEffect(() => {
-      const loadData = async () => {
-        await fetchDocuments(); // Fetch documents
-        await fetchNotes(); // Fetch notes
-      };
-      if (isLogin === true) {
-        loadData();
-      }
-    }, [isLogin]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      await fetchDocuments(); // Fetch documents
+      await fetchNotes(); // Fetch notes
+    };
+    if (isLogin === true) {
+      loadData();
+    }
+  }, [isLogin]);
 
   useEffect(() => {
     // console.log("Updated userDetails:", userDetails);

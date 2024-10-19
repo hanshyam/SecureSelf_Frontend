@@ -14,8 +14,8 @@ const Notes = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [loading, setLoading] = useState(false);
-  const { notes,addNote } = useContext(StoreContext);
-  
+  const { notes, addNote } = useContext(StoreContext);
+
   if (!notes) {
     // Show loading or placeholder if notes haven't been fetched yet
     return <div>Loading...</div>;
@@ -27,26 +27,24 @@ const Notes = () => {
       return;
     }
 
-      addNote(title,description);
-      setLoading(true);
-      setTitle("");
-      setDescription("");
-      setLoading(false);
-      setNotesAddBox("z-n1");
+    addNote(title, description);
+    setLoading(true);
+    setTitle("");
+    setDescription("");
+    setLoading(false);
+    setNotesAddBox("z-n1");
   };
 
- const filteredNotes = notes.filter(note => {
-  if (active === "Notes") {
-    return note.category === "normal"; // Show only normal notes
-  } else if (active === "Archieve") {
-    return note.category === "archieve"; // Show only archived notes
-  } else if (active === "Trash") {
-    return note.category === "trash"; // Show only trashed notes
-  }
-  return true; // Default case (return all notes if no match)
-});
-
-  
+  const filteredNotes = notes.filter((note) => {
+    if (active === "Notes") {
+      return note.category === "normal"; // Show only normal notes
+    } else if (active === "Archieve") {
+      return note.category === "archieve"; // Show only archived notes
+    } else if (active === "Trash") {
+      return note.category === "trash"; // Show only trashed notes
+    }
+    return true; // Default case (return all notes if no match)
+  });
 
   return (
     <>
@@ -83,10 +81,17 @@ const Notes = () => {
           </div>
           <div className="col-10 px-5 position-relative">
             <div className="d-flex flex-row justify-content-end mt-3">
-              <button onClick={() => setNotesAddBox("z-3 d-flex")} className="btn">Add Note</button>
+              <button
+                onClick={() => setNotesAddBox("z-3 d-flex")}
+                className="btn"
+              >
+                Add Note
+              </button>
             </div>
 
-            <div className={` flex-column p-3 rounded-2 position-absolute gap-15 addNotesBox ${notesAddBox}`}>
+            <div
+              className={` flex-column p-3 rounded-2 position-absolute gap-15 addNotesBox ${notesAddBox}`}
+            >
               <div className="form-floating mt-2">
                 <input
                   type="text"
@@ -114,20 +119,23 @@ const Notes = () => {
                   {loading ? "Saving..." : "Save"}
                 </button>
               </div>
-              <div onClick={() => setNotesAddBox("z-n1 d-none")} className="position-absolute top-1 end-1">
+              <div
+                onClick={() => setNotesAddBox("z-n1 d-none")}
+                className="position-absolute top-1 end-1"
+              >
                 <RxCross2 />
               </div>
             </div>
 
             <div className="row">
               <div className="col-12 d-flex flex-wrap gap-15 mt-3">
-                {filteredNotes.map(item => (
-                  <NotesBox 
+                {filteredNotes.map((item) => (
+                  <NotesBox
                     key={item._id}
-                    bgcolor={item.bgcolor} 
-                    title={item.title} 
-                    description={item.description} 
-                    noteId={item._id} 
+                    bgcolor={item.bgcolor}
+                    title={item.title}
+                    description={item.description}
+                    noteId={item._id}
                     category={item.category}
                   />
                 ))}

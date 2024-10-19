@@ -5,7 +5,7 @@ import Loginmain from "./components/Loginmain";
 import Uploadcard from "./components/Uploadcard";
 import Otherupload from "./components/Otherupload";
 import Other_doc from "./components/Other_doc";
-import Layout from "./Components/Layout";
+import Layout from "./components/Layout";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import ForgetPassword from "./Pages/ForgetPassword/ForgetPassword";
