@@ -4,7 +4,7 @@ import axios from "axios";
 export const StoreContext = createContext();
 
 const StoreContextProvider = (props) => {
-  const url = "https://secureself-backend-ftrq.onrender.com";
+  const url = "https://secureself-backend-ftrq.onrender.com/api";
   const [token, setToken] = useState("");
   const [isLogin, setIsLogin] = useState(false);
   const [userDetails, setUserDetails] = useState({});
