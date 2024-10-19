@@ -29,7 +29,7 @@ function Other_doc() {
       setUploading(true); // Start loading
       const storedToken = localStorage.getItem("token");
       const response = await axios.post(
-        "https://secureself-backend-ftrq.onrender.com/api/document/upload-image",
+        "https://secureself-backend-9awj.onrender.com/api/document/upload-image",
         formData,
         {
           headers: {
@@ -63,7 +63,7 @@ function Other_doc() {
     try {
       setIsSubmitting(true); // Start submitting
       const res = await axios.post(
-        "https://secureself-backend-ftrq.onrender.com/api/document/add-document",
+        "https://secureself-backend-9awj.onrender.com/api/document/add-document",
         cardData,
         {
           headers: {

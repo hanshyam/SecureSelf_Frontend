@@ -26,7 +26,7 @@
 //     try {
 //       setUploading(true); // Start loading
 
-//       const response = await axios.post('https://secureself-backend-ftrq.onrender.com/api/document/upload-image', formData, {
+//       const response = await axios.post('https://secureself-backend-9awj.onrender.com/api/document/upload-image', formData, {
 //         headers: {
 //           'Content-Type': 'multipart/form-data',
 //         },
@@ -56,7 +56,7 @@
 
 //     try {
 //       setIsSubmitting(true); // Start submitting
-//       const res = await axios.post('https://secureself-backend-ftrq.onrender.com/api/document/add-document', cardData);
+//       const res = await axios.post('https://secureself-backend-9awj.onrender.com/api/document/add-document', cardData);
 //       console.log('Card created:', res.data);
 
 //       // Show success notification
@@ -204,7 +204,7 @@ function Otherupload() {
       setUploading(true); // Start loading
       const storedToken = localStorage.getItem("token");
       const response = await axios.post(
-        "https://secureself-backend-ftrq.onrender.com/api/document/upload-image",
+        "https://secureself-backend-9awj.onrender.com/api/document/upload-image",
         formData,
         {
           headers: {
@@ -238,7 +238,7 @@ function Otherupload() {
     try {
       setIsSubmitting(true); // Start submitting
       const res = await axios.post(
-        "https://secureself-backend-ftrq.onrender.com/api/document/add-document",
+        "https://secureself-backend-9awj.onrender.com/api/document/add-document",
         cardData,
         {
           headers: {
