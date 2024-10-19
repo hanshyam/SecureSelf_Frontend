@@ -1,0 +1,24 @@
+.nav-left{
+    
+}
+.nav-left img{
+    width:100px;
+}
+header a{
+    color: rgb(166, 176, 176);
+}
+header a:hover{
+    opacity: 0.5;
+}
+.hamburger {
+    border: 1px solid #777777;
+    border-radius: 5px;
+    padding: 5px;
+}
+.hamburger > svg{
+    font-size:40px;
+    cursor: pointer;
+}
+.active-menu a{
+    color: #fff !important;
+}

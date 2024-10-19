@@ -1,0 +1,124 @@
+/* Full height with flexbox centering */
+.login-section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Card-like container */
+.login-wrapper > div {
+  background-color: white; 
+  padding: 40px 30px;
+  border-radius: 10px;
+  max-width: 450px; 
+  width: 100%; 
+  text-align: center; 
+}
+h2 {
+  margin-bottom: 20px;
+  color: #333; 
+}
+.form-label{
+  font-weight: 600;
+}
+.error-handling {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.login-section .btn {
+  background-color: #00c389 !important; 
+  color: white !important;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; 
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #00a974; /* Darker green on hover */
+}
+
+/* Link styling */
+a {
+  color: #00c389;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* "Forgot password" and sign-up link */
+.my-3 {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.my-3 a {
+  color: #00c389;
+}
+
+/* Mobile responsive */
+@media (max-width: 500px) {
+  .login-wrapper > div {
+      padding: 20px;
+      width: 100%;
+  }
+}
+
+
+.input-box{
+  padding: 10px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}  
+.input-box svg{
+  color: #ccc;
+}
+.input-box input{
+  border: 0;
+  outline: 0;
+  padding: 0;
+  height: 100%;
+  color: #ccc;
+}
+.input-box input:focus{
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.login-upper-part{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-upper-part img{
+  width: 120px;
+  margin-bottom: 0;
+}
+.login-upper-part h4{
+  color: #777777;
+  font-size:18px;
+}
+.login-lower-part{
+  display: flex;
+  justify-content: center;
+  margin-top:20px;
+}
+.login-lower-part h5{
+ font-size: 16px;
+ color: rbga(0,0,0,0.6);
+}
+.login-lower-part a{
+  color: #00a974;
+}
