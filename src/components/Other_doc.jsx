@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify"; // Import Toastify
 import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
 import { useNavigate, useParams } from "react-router-dom"; // Import useNavigate and useParams
 import bgimage from "../img/bg.webp";
+import { StoreContext } from "../store/storeContext";
 
 function Other_doc() {
   const [imageSelected, setImageSelected] = useState(null);
@@ -13,6 +14,7 @@ function Other_doc() {
   const [category, setCategory] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false); // For tracking submit state
   const navigate = useNavigate(); // Initialize useNavigate
+  const {fetchDocuments} = useContext(StoreContext);
   // Get category from the URL parameters
 
   const uploadImage = async () => {
@@ -81,7 +83,7 @@ function Other_doc() {
       setImageSelected(null);
       setImageUrl("");
       setIsSubmitting(false); // Stop submitting
-
+      fetchDocuments();
       // Navigate to /main after 2 seconds
       setTimeout(() => {
         navigate("/"); // Navigate to the main page

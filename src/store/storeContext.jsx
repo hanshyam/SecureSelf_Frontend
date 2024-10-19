@@ -183,6 +183,7 @@ const StoreContextProvider = (props) => {
     deleteNote,
     updateNote,
     documents,
+    fetchDocuments,
   };
 
   return (

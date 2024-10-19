@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify"; // Import Toastify
 import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
 import { useNavigate, useParams } from "react-router-dom"; // Import useNavigate and useParams
 import bgimage from "../img/bg.webp";
+import { StoreContext } from "../store/storeContext";
 
 function Uploadcard() {
   const [imageSelected, setImageSelected] = useState(null);
@@ -13,7 +14,7 @@ function Uploadcard() {
   const [isSubmitting, setIsSubmitting] = useState(false); // For tracking submit state
   const navigate = useNavigate(); // Initialize useNavigate
   const { category } = useParams(); // Get category from the URL parameters
-
+  const {fetchDocuments} = useContext(StoreContext);
   const uploadImage = async () => {
     if (!imageSelected) {
       alert("Please select an image to upload");
@@ -79,7 +80,8 @@ function Uploadcard() {
       setImageSelected(null);
       setImageUrl("");
       setIsSubmitting(false); // Stop submitting
-
+      
+      fetchDocuments();
       // Navigate to /main after 2 seconds
       setTimeout(() => {
         navigate("/"); // Navigate to the main page
